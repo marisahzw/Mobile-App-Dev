@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextHoursWorked"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Number of Hours Worked"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextHourlyRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Hourly Rate"
+        app:layout_constraintTop_toBottomOf="@id/editTextHoursWorked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintTop_toBottomOf="@id/editTextHourlyRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textPay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pay: "
+        app:layout_constraintTop_toBottomOf="@id/calculateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Add similar TextViews for other results (Overtime Pay, Total Pay, Tax) -->
+
+    <TextView
+        android:id="@+id/textOvertimePay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Overtime Pay: "
+        app:layout_constraintTop_toBottomOf="@id/textPay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textTotalPay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total Pay: "
+        app:layout_constraintTop_toBottomOf="@id/textOvertimePay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/textTax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tax: "
+        app:layout_constraintTop_toBottomOf="@id/textTotalPay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
